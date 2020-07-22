@@ -6,5 +6,5 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.querySelector('.container')
+  document.querySelector('.root')
 );

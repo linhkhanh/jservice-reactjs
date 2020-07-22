@@ -2,8 +2,8 @@ import React from 'react';
 class Footer extends React.Component {
   render () {
     return (
-      <div>
-          <p>App is built by LinhLe</p>
+      <div className="fixed-bottom footer">
+          <p className="text-footer">App is built by LinhLe</p>
       </div>
     )
   }

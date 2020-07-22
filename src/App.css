@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=Rajdhani:wght@500;700&family=Ubuntu:wght@400;700&display=swap');
+body {
+    border-top: 10px solid darkred;
+    padding-top: 1%;
+    font-family: 'Ubuntu', sans-serif;
+}
+.header {
+    background-color: #2e7996;
+    padding: 1%;
+    text-align: center;
+    color: white;
+    border-top: 10px solid #1a464e;
+    border-bottom: 10px solid darkred;
+    margin-bottom: 2%;
+}
+.footer {
+    background-color: #bde4f0;
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-footer {
+    font-size: 15px;
+    color: gray;
+}
+.big-size {
+    font-size: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    width: 70%;
+    padding-bottom: 1%;
+    border: 8px solid #2e7996;
+    padding-top: 1%;
+    margin-bottom: 5%;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.score {
+    margin-bottom: 3%;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+    margin-right: 1%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.question {
+    width: 80%;
+    margin: auto;
+}
+
+.get-question {
+    margin-bottom: 3%;
+}
+
+.content-question {
+    width: 70%;
+    margin: auto;
+}
+
+.answer {
+    width: 55%;
+    margin: auto;
+}
+
+.top {
+    border-bottom: 2px dotted darkred;
+    margin-bottom: 2%;
+}
+
+.red {
+    color: red;
+}
+
+.main-content {
+    font-family: 'Jaldi', sans-serif;
+}
+
+.darkred {
+    color: darkred;
+}
+
+.blue {
+    color: #154a5a;
 }

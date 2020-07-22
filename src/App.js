@@ -38,10 +38,10 @@ class App extends React.Component {
     })
   }
 
-   // show answer
-   toggleAnswer = () => {
+  // show answer
+  toggleAnswer = () => {
     this.setState({
-      showAnswer: true
+      showAnswer: !this.state.showAnswer
     })
   }
 
@@ -67,10 +67,9 @@ class App extends React.Component {
   }
 
   // get 10 random questions
-  getTenQuestions = async() => {
+  getTenQuestions = async () => {
     const response = await fetch(this.state.tenQuesUrl);
     const result = await response.json();
-    console.log(result);
     this.setState({
       randomQuestion: '',
       tenQuestions: result
@@ -81,16 +80,23 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <Score score={this.state.score} 
-        addScore={this.addScore} 
-        subtractScore={this.subtractScore} 
-        question={this.state.randomQuestion}
-        resetScore={this.resetScore}
-        />
-        <ButtonGetQuestions getRandomQuestion={this.getRandomQuestion} getTenQuestions={this.getTenQuestions}/>
-        <Question question={this.state.randomQuestion} />
-        <TenQuestions tenQuestions={this.state.tenQuestions}/>
-        <Answer toggleAnswer={this.toggleAnswer} showAnswer={this.state.showAnswer} question={this.state.randomQuestion} />
+        <div className="container">
+          <div className="top row">
+            <Score score={this.state.score}
+              addScore={this.addScore}
+              subtractScore={this.subtractScore}
+              question={this.state.randomQuestion}
+              resetScore={this.resetScore}
+            />
+            <ButtonGetQuestions getRandomQuestion={this.getRandomQuestion} getTenQuestions={this.getTenQuestions} />
+          </div>
+          <div className="main-content">
+            <Question question={this.state.randomQuestion} />
+            <TenQuestions tenQuestions={this.state.tenQuestions} />
+            <Answer toggleAnswer={this.toggleAnswer} showAnswer={this.state.showAnswer} question={this.state.randomQuestion} />
+          </div>
+
+        </div>
         <Footer />
       </React.Fragment>
     )

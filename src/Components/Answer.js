@@ -4,9 +4,9 @@ class Answer extends React.Component {
         return (
             <React.Fragment>
                 {this.props.question ?
-                    <div>
-                        <button onClick={this.props.toggleAnswer}>Answer</button>
-                        <p>{this.props.showAnswer ? this.props.question.answer : ''} </p>
+                    <div className="answer">
+                        <button onClick={this.props.toggleAnswer} className="btn btn-warning">Answer</button>
+                        &nbsp; <span className="red">{this.props.showAnswer ? this.props.question.answer : ''} </span>
                     </div> : ''
                 }
             </React.Fragment>
