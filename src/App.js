@@ -12,8 +12,8 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      url: 'http://jservice.io/api/random',
-      tenQuesUrl: 'http://jservice.io/api/random?count=10',
+      url: 'https://jservice.io/api/random',
+      tenQuesUrl: 'https://jservice.io/api/random?count=10',
       showAnswer: false,
       score: 0,
       randomQuestion: '',
